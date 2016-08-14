@@ -1,8 +1,9 @@
 {
     "files.exclude": {
-        "src/**/.css": true,
+        "UI/**/.css": true,
         "node_modules": true,
         "build": true,
-        "typings": true
+        "typings": true,
+        "**/*.pyc": true
     }
 }

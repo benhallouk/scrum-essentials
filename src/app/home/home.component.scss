@@ -1,18 +1,26 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color:#5896c9;
+}
 .alert{
     margin-top: 24px;
+    background-color: #ffffff;
+    border-color: #5896c9;
+    color: #5896c9;
 }
 .artifact-item {
     float: left;
     padding: 10px;
     min-width: 112px;            
-    text-align: center;    
+    text-align: center;
+    color: #1aa9a3;    
     + i {
         float: left;
-        padding: .2em;
+        padding-top: 1.2em;
+        color: #1aa9a3;
     }
 }
 .sprint-diagram{
-    margin-top: 100px;
     .content{
         display: table;
         margin: 0 auto;

@@ -3,3 +3,6 @@ node_modules
 typings
 *.css
 npm-debug.log
+*.sqlite
+*.db
+*.pyc

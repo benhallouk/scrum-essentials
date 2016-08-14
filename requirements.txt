@@ -1,0 +1,9 @@
+Flask
+Flask_DebugToolbar
+Flask_Login
+Flask_SQLAlchemy
+Flask_WTF
+WTForms
+flask_script
+flask-testing
+nose

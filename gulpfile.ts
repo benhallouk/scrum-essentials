@@ -13,13 +13,13 @@ gulp.task('clean', (cb) => {
 });
 
 gulp.task('tslint', () => {
-    return gulp.src("UI/**/*.ts")
+    return gulp.src("ui/**/*.ts")
         .pipe(tslint())
         .pipe(tslint.report('prose'));
 });
 
 gulp.task("compile", ["tslint"], () => {
-    let tsResult = gulp.src("UI/**/*.ts")
+    let tsResult = gulp.src("ui/**/*.ts")
         .pipe(sourcemaps.init())
         .pipe(tsc(tsProject));
     return tsResult.js
@@ -28,7 +28,7 @@ gulp.task("compile", ["tslint"], () => {
 });
 
 gulp.task('sass', function () {
-  gulp.src(['UI/**/*.scss', '!node_modules/**/*.*'])
+  gulp.src(['ui/**/*.scss', '!node_modules/**/*.*'])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(function(file) {
             return file.base;
@@ -36,7 +36,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task("resources", () => {
-    return gulp.src(["UI/**/*", "!**/*.ts", "!**/*.scss"])
+    return gulp.src(["ui/**/*", "!**/*.ts", "!**/*.scss"])
         .pipe(gulp.dest("build"));
 });
 
@@ -54,13 +54,13 @@ gulp.task("libs", () => {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(["UI/**/*.ts"], ['compile']).on('change', function (e) {
+    gulp.watch(["ui/**/*.ts"], ['compile']).on('change', function (e) {
         console.log('TypeScript file ' + e.path + ' has been changed. Compiling.');
     });
-    gulp.watch(["UI/**/*.js", "UI/**/*.html", "UI/**/*.css"], ['resources']).on('change', function (e) {
+    gulp.watch(["ui/**/*.js", "ui/**/*.html", "ui/**/*.css"], ['resources']).on('change', function (e) {
         console.log('Resource file ' + e.path + ' has been changed. Updating.');
     });
-    gulp.watch('UI/**/*.scss', ['sass', 'resources'], function(e){
+    gulp.watch('ui/**/*.scss', ['sass', 'resources'], function(e){
         console.log('Sass file ' + e.path + ' has been changed. Updating.');
     });
 });

@@ -20,12 +20,11 @@ def create_app(config_name):
     login_manager.init_app(app)
     toolbar.init_app(app)
 
-    
-    from .main import main as main_blueprint
-    app.register_blueprint(main_blueprint,  url_prefix='/')
-
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint, url_prefix='/auth')
+
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint,  url_prefix='/')
 
     from .backlog import backlog as backlog_blueprint
     app.register_blueprint(backlog_blueprint, url_prefix='/api')    

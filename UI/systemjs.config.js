@@ -33,7 +33,8 @@
 
     var config = {
         map: map,
-        packages: packages
+        packages: packages,
+        baseURL: '/static'
     };
 
     // filterSystemConfig - index.html's chance to modify config before we register it.

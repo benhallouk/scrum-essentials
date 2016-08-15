@@ -1,9 +1,9 @@
 {
   "port": 8000,
   "files": [
-    "build/**/*.{html,htm,css,js}"
+    "backend/static/**/*.{html,htm,css,js}"
   ],
   "server": {
-    "baseDir": "build"
+    "baseDir": "backend/static"
   }
 }

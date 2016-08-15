@@ -1,4 +1,4 @@
-build
+static
 node_modules
 typings
 *.css

@@ -4,8 +4,8 @@ import {OnInit} from "@angular/core";
 
 @Component({
     selector: 'item-list',
-    templateUrl: './app/home/home.component.html',
-    styleUrls: ['./app/home/home.component.css'],
+    templateUrl: '/static/app/home/home.component.html',
+    styleUrls: ['static/app/home/home.component.css'],
     directives: [RouterLink, ROUTER_DIRECTIVES]
 })
 export class HomeComponent implements OnInit {

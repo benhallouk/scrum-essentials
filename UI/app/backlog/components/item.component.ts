@@ -7,7 +7,7 @@ import {Item} from "../models/item";
 
 @Component({
     selector: 'item',
-    templateUrl: './app/backlog/components/item.component.html'
+    templateUrl: '/static/app/backlog/components/item.component.html'
 })
 export class ItemComponent {
     @Input() item:Item;

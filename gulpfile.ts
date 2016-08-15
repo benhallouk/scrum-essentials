@@ -9,7 +9,7 @@ const tslint = require('gulp-tslint');
 const sass = require('gulp-sass');
 
 gulp.task('clean', (cb) => {
-    return del(["build"], cb);
+    return del(["backend/static"], cb);
 });
 
 gulp.task('tslint', () => {
@@ -24,7 +24,7 @@ gulp.task("compile", ["tslint"], () => {
         .pipe(tsc(tsProject));
     return tsResult.js
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("build"));
+        .pipe(gulp.dest("backend/static"));
 });
 
 gulp.task('sass', function () {
@@ -37,7 +37,7 @@ gulp.task('sass', function () {
 
 gulp.task("resources", () => {
     return gulp.src(["ui/**/*", "!**/*.ts", "!**/*.scss"])
-        .pipe(gulp.dest("build"));
+        .pipe(gulp.dest("backend/static"));
 });
 
 gulp.task("libs", () => {
@@ -50,7 +50,7 @@ gulp.task("libs", () => {
             'zone.js/dist/**',
             '@angular/**'
         ], {cwd: "node_modules/**"})
-        .pipe(gulp.dest("build/lib"));
+        .pipe(gulp.dest("backend/static/lib"));
 });
 
 gulp.task('watch', function () {

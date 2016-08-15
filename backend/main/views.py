@@ -1,9 +1,15 @@
 from flask import render_template, url_for, request, flash, redirect
 from . import main
+from .. import login_manager
+from ..models.User import User
+
+@login_manager.user_loader
+def load_user(userid):
+    return User.query.get(int(userid))
 
 @main.route('/')
 def index():
-    return "test"#render_template("index.html")
+    return render_template("index.html")
 
 @main.errorhandler(404)
 def page_not_found(e):

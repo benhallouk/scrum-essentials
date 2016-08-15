@@ -7,8 +7,8 @@ import {ItemComponent} from "./components/item.component";
 
 @Component({
     selector: 'item-list',
-    templateUrl: './app/backlog/backlog.component.html',
-    styleUrls: ['./app/backlog/backlog.component.css'],
+    templateUrl: '/static/app/backlog/backlog.component.html',
+    styleUrls: ['static/app/backlog/backlog.component.css'],
     directives: [ItemComponent],
     providers: [ItemService]
 })

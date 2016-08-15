@@ -7,8 +7,8 @@ import {AboutComponent} from "./about/about.component";
 
 @Component({
     selector: "app",
-    templateUrl: "./app/app.component.html",
-    styleUrls: ['./app/app.component.css'],
+    templateUrl: "/static/app/app.component.html",
+    styleUrls: ['static/app/app.component.css'],
     directives: [HomeComponent, AboutComponent, RouterLink, ROUTER_DIRECTIVES]
 })
 @RouteConfig([

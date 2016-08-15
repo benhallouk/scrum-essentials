@@ -7,3 +7,4 @@ WTForms
 flask_script
 flask-testing
 nose
+jsonpickle

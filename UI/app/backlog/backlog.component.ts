@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 import {OnInit} from "@angular/core";
 
 import {Item} from "./models/item";
-import {ItemService} from "./services/item-service";
+import {BacklogService} from "./services/backlog-service";
 import {ItemComponent} from "./components/item.component";
 
 @Component({
@@ -10,7 +10,7 @@ import {ItemComponent} from "./components/item.component";
     templateUrl: '/static/app/backlog/backlog.component.html',
     styleUrls: ['static/app/backlog/backlog.component.css'],
     directives: [ItemComponent],
-    providers: [ItemService]
+    providers: [BacklogService]
 })
 export class BacklogComponent implements OnInit {
 
@@ -18,13 +18,15 @@ export class BacklogComponent implements OnInit {
     selectedItem:Item;
     items:Array<Item>;
 
-    constructor(private _itemService:ItemService) {
-        this.items = _itemService.getItems();
-        this.calculateTodoCount();
-    }
+    constructor(private _backlogService:BacklogService) {}
 
     ngOnInit() {
-        console.log("Todo component initialized with " + this.items.length + " tasks.");
+        //this.newItem = new Item(0, "", "", "");
+        this._backlogService.getItems().then(items => {
+            console.log("Todo component initialized with " + items + " tasks.");
+            this.items = items;
+            this.calculateTodoCount();
+        });
     }
 
     calculateTodoCount() {

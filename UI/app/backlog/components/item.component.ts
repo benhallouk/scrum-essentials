@@ -14,7 +14,8 @@ export class ItemComponent {
     @Output() statusChanged:any = new EventEmitter<any>();
 
     toggleDone() {
-        this.item.toggleDone();
+        //this.item.toggleDone();
+        this.item.done = !this.item.done;
         this.statusChanged.emit(null);
     }
 }

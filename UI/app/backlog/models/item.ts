@@ -1,6 +1,6 @@
 export class Item {
 
-    constructor(public name:string, public done:boolean) {
+    constructor(public id:number, public subject:string, public body:string, public done:boolean) {
     }
 
     toggleDone() {

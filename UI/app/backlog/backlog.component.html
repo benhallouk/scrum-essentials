@@ -2,7 +2,7 @@
 <ul>
     <li *ngFor="let item of items" [class.selected]="item == selectedItem">
         <a href="javascript:void(0)" (click)="select(item)">
-            {{item.name}}
+            {{item.subject}}
             <span [ngSwitch]="item.done">
                 <template [ngSwitchWhen]="true">[Yes]</template>
                 <template [ngSwitchWhen]="false">[No]</template>

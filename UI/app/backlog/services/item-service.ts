@@ -5,11 +5,11 @@ import {Item} from "../models/item";
 export class ItemService {
 
     private items:Array<Item> = [
-        new Item("Item 1", false),
-        new Item("Item 2", false),
-        new Item("Item 3", false),
-        new Item("Item 4", false),
-        new Item("Item 5", false)
+        new Item(1, "Item 1", "", false),
+        new Item(2, "Item 2", "", false),
+        new Item(3, "Item 3", "", false),
+        new Item(4, "Item 4", "", false),
+        new Item(5, "Item 5", "", false)
     ];
 
     getItems():Array<Item> {
@@ -17,7 +17,7 @@ export class ItemService {
     }
 
     addItem(name:string) {
-        this.items.push(new Item(name, false));
+        this.items.push(new Item(0, name, "", false));
     }
 
 }

@@ -1,0 +1,50 @@
+time.icon
+{
+    font-size: 1em;
+    display: block;
+    position: relative;
+    width: 5em;
+    height: 5em;
+    background-color: #fff;
+    border-radius: 0.6em;
+    border: #d67a76 1px solid;
+    overflow: hidden;
+}
+
+time.icon *
+{
+    display: block;
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+}
+
+time.icon strong
+{
+    position: absolute;
+    top: 0;
+    padding: 0.4em 0;
+    color: #fff;
+    background-color: #d67a76;
+}
+
+time.icon em
+{
+    position: absolute;
+    bottom: 0.3em;
+    color: #d67a76;
+}
+
+time.icon span
+{
+    font-size: 2.2em;
+    letter-spacing: -0.05em;
+    padding-top: 0.56em;
+    color: #2f2f2f;
+}
+
+p{
+    margin: 0;
+}

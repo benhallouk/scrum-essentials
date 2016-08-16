@@ -1,10 +1,9 @@
 {
-  "name": "angular-2-base",
+  "name": "scrum-essentials",
   "version": "1.0.0",
-  "description": "Angular 2 code base with TypeScript SASS and Gulp QuickStart",
+  "description": "Scrum Essentials is set of tools that has been designed to facilitate all the scrum events and artifacts",
   "scripts": {
     "clean": "gulp clean",
-    "compile": "gulp compile",
     "build": "gulp build",
     "start": "concurrently --kill-others \"gulp watch\" \"lite-server\"",
     "postinstall": "typings install"

@@ -4,3 +4,41 @@ p{
 img{
     width: 800px;
 }
+.phone{
+    position: absolute;
+    width: 256px;
+    height: 378px;
+    background: #fff;
+    top: 426px;
+    left: 243px;
+    opacity: 1;
+    border: none;
+    transform: scale(0.219);
+    transform-origin: top left;
+}
+
+.tablet{
+    position: absolute;
+    width: 582px;
+    height: 708px;
+    background: #fff;
+    top: 346px;
+    left: 339px;
+    opacity: 1;
+    border: none;
+    transform: scale(0.219);
+    transform-origin: top left;
+}
+
+.desktop{
+    position: absolute;
+    width: 1180px;
+    height: 774px;
+    background: #fff;
+    top: 92px;
+    left: 527px;
+    opacity: 1;
+    border: none;
+    transform: scale(0.4181);
+    transform-origin: top left;
+}
